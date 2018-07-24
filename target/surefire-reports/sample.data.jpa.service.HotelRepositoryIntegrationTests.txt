@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: sample.data.jpa.service.HotelRepositoryIntegrationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 5.437 s <<< FAILURE! - in sample.data.jpa.service.HotelRepositoryIntegrationTests
+executesQueryMethodsCorrectly(sample.data.jpa.service.HotelRepositoryIntegrationTests)  Time elapsed: 0 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory
+Caused by: javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory
+Caused by: org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution
+Caused by: nl.topicus.jdbc.exception.CloudSpannerSQLException: Error when opening Google Cloud Spanner connection: Error reading credential file /home/loite/CloudSpannerKeys/cloudspanner-key.json: File does not exist
+Caused by: java.io.IOException: Error reading credential file /home/loite/CloudSpannerKeys/cloudspanner-key.json: File does not exist
+
